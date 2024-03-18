@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>report</title>
+    <style>
+        body{
+            margin: 20px;
+            padding: 10px;
+            background: #fff;
+            box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.06);
+            font-family: Arial, sans-serif;
+        }
+
+        .head{
+            text-align: center;
+        }
+
+        .vs{
+            font-size: 24px;
+            color: blue;
+        }
+
+        .little{
+            font-size: 18px;
+            color: tomato;  
+        }
+
+        b{
+            color: fuchsia;
+        }
+
+        h4{
+            color: darkblue;
+        }
+
+        .section{
+            background: #fff;
+            box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.06);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media only screen and (max-width: 768px) {
+            /* Adjust styles for smaller screens */
+            body {
+                font-size: 14px;
+            }
+            .vs {
+                font-size: 20px;
+            }
+            .little {
+                font-size: 16px;
+            }
+            .section {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="head">
+        <h3>Summary Report on <span class="vs">“Comparative Analysis of Packet Switching VS Circuit Switching"</span></h3>
+        <div class="head-1">
+            <p> <h4 class="head-2">Subject: <b class="little">Computer Networking</b>  <br> Teacher:  <b class="little">Ray</b> <br> Department: <b class="little">Software Engineering</b> </h4> 
+            </p>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h4>Introduction:</h4>
+        <p>In the realm of telecommunications, the mechanisms governing data transmission play a critical role in determining efficiency, reliability, and cost-effectiveness. Two fundamental approaches, packet switching, and circuit switching, stand out for their distinct operational principles and applications. This report aims to elucidate the variances between packet switching and circuit switching, exploring their functionalities, advantages, and limitations.</p>
+    </div>
+
+    <!-- Pocket Switching -->
+
+    <div class="section">
+        <div>
+            <h4>Packet Switching:</h4>
+            <p>Packet switching is a data transmission technique that involves breaking user information into discrete data envelopes called packets. Each packet includes its own appended control information for routing, sequencing, and error checking. This approach allows a communications channel to be shared by multiple users, with each user utilizing the circuit only for the duration required to transmit a single packet.</p>
+            <img src="img/packet-jpg.webp" alt="">
+        </div>
+
+        <div>
+            <h4>Advantages:</h4>
+            <ul>
+                <li><b>Efficient use of bandwidth:</b> Bandwidth is shared among multiple users, and resources are allocated only when data needs to be transmitted.</li>
+                <li><b>Flexibility: </b> Packet switching can handle a wide range of data rates and packet sizes.</li>
+                <li><b>Scalability:</b> Packet switching can handle large amounts of traffic on a network.</li>
+                <li><b>Lower cost:</b> Packet switching is less expensive than circuit switching because resources are shared among multiple users.</li>
+            </ul>
+            <p>Packet switching is more efficient than circuit switching as packets can find their own data paths to their destination without the need for a dedicated channel. It is also reliable, as data packets can be resent if they don't reach their destination, reducing packet loss. Additionally, packet switching reduces costs by allowing general network traffic and voice traffic to be transferred across the network without the need for a dedicated channel.</p>
+        </div>
+
+        <div>
+            <h4>Disadvantages: </h4>
+            <ul>
+                <li><b>Higher latency:</b> Packet switching has higher latency than circuit switching because packets must be routed through multiple nodes, which can cause delay.</li>
+                <li><b>Limited Quality of Service (QoS): </b> Packet switching provides limited QoS guarantees, meaning that different types of traffic may be treated equally.</li>
+                <li><b>Packet loss:</b> Packet switching can result in packet loss due to congestion on the network or errors in transmission.</li>
+                <li><b>Unsuitable for real-time communication:</b> Packet switching is not suitable for real-time communication, such as voice and video, because of the potential for latency and packet loss.</li>
+            </ul>
+            <p>The biggest limitation of packet switching is its unsuitability for applications requiring minimal latency. In networks with many voice calls, circuit switching is necessary for high-quality end calls. Packet switching may result in choppy audio, making it difficult for users to understand each other.</p>
+        </div>
+    </div>
+
+    <!-- Circuit Switching -->
+
+    <div class="section">
+        <div>
+            <h4>Circuit Switching:</h4>
+            <p>Circuit switching is a communication method where a dedicated communication path, or circuit, is established between two devices before data transmission begins. This dedicated circuit remains reserved exclusively for the duration of the session, ensuring a continuous and reliable connection. Commonly used in voice communication and some types of data communication, circuit switching provides a physical path between the source and destination, unlike packet switching, where data packets travel independently through dynamic routes.</p>
+            <img src="img/Circuit-.jpg" alt="">
+        </div>
+
+        <div>
+            <h4>Advantages:</h4>
+            <ul>
+                <li><b>Guaranteed bandwidth:</b> Circuit switching provides a dedicated path for communication, ensuring that bandwidth is guaranteed for the duration of the call.</li>
+                <li><b>Low latency: </b> Circuit switching provides low latency because the path is predetermined, and there is no need to establish a connection for each packet.</li>
+                <li><b>Predictable performance:</b> Circuit switching provides predictable performance because the bandwidth is reserved, and there is no competition for resources.</li>
+                <li><b>Suitable for real-time communication:</b> Circuit switching is suitable for real-time communication, such as voice and video, because it provides low latency and predictable performance.</li>
+            </ul>
+            <p>Circuit switching has become popular due to its ability to minimize delay for users before and during a call, ensuring a consistent user experience. It provides consistent bandwidth, channels, and data rates, allowing users to stay connected for longer periods without performance issues.</p>
+        </div>
+
+        <div>
+            <h4>Disadvantages:</h4>
+            <ul>
+                <li><b>Inefficient use of bandwidth:</b> Circuit switching is inefficient because the bandwidth is reserved for the entire duration of the call, even when no data is being transmitted.</li>
+                <li><b>Limited scalability: </b> Circuit switching is limited in scalability because the number of circuits that can be established is finite, which can restrict the number of simultaneous calls.</li>
+                <li><b>High cost:</b> Circuit switching is expensive as it requires dedicated resources, such as hardware and bandwidth, for the duration of the call.</li>
+            </ul>
+            <p>While circuit switching is ideal for voice communications, it is not suitable for other types of connections due to its inefficiency in resource utilization. Dedication of one channel to a single service makes it unavailable for other services, leading to higher costs.</p>
+        </div>
+    </div>
+
+    <!-- Similarities -->
+
+    <div class="section">
+        <div>
+            <h4> Similarities:</h4>
+            <ul>
+                <li>Both methods involve the transmission of data over a network.</li>
+                <li>Both methods use a physical layer of the OSI model for transmission of data.</li>
+                <li>Both methods can be used to transmit voice, video, and data.</li>
+                <li>Both methods can be used in the same network infrastructure.</li>
+                <li>Both methods can be used for both wired and wireless networks.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Difference Table -->
+
+    <div class="section">
+        <h4>Difference Between Circuit Switching and Packet Switching:</h4>
+        <p>Circuit switching is referred to as the technology of data transfer that utilizes sending messages from one point to another. This involves sending messages from the receiver to the sender and back simultaneously. A physical connection gets established during this process along with the receiver; a dedicated circuit is always present to handle data transmissions, through which data is sent. Packet switching can be used as an alternative to circuit switching. In packet-switched networks, data is sent in discrete units that have variable lengths.</p>
+        <table>
+            <tr>
+                <th>Circuit Switching</th>
+                <th>Packet Switching</th>
+            </tr>
+            <tr>
+                <td>A circuit needs to be established to make sure that data transmission takes place.</td>
+                <td>Each packet containing the information that needs to be processed goes through the dynamic route.</td>
+            </tr>
+            <tr>
+                <td>A uniform path is followed throughout the session.</td>
+                <td>There is no uniform path that is followed end to end through the session.</td>
+            </tr>
+            <tr>
+                <td>It is ideal for voice communication, while also keeping the delay uniform.</td>
+                <td>It is used mainly for data transmission as the delay is not uniform.</td>
+            </tr>
+            <tr>
+                <td>Without a connection, it cannot exist, as the connection needs to be present on a physical layer.</td>
+                <td>A connection is not necessary, as it can exist without one too. It needs to be present on a network layer.</td>
+            </tr>
+            <tr>
+                <td>Data to be transmitted is processed at the source itself.</td>
+                <td>Data is processed and transmitted at the source as well as at each switching station.</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Conclusion -->
+
+    <div class="section">
+        <h4>Conclusion:</h4>
+        <p>In conclusion, circuit switching and packet switching are two different methods used in communication networks to transfer data between two or more devices. Circuit switching establishes a dedicated communication path before data transmission begins, while packet switching divides the data into smaller units called packets and transmits them over the network. Understanding the differences between the two methods can help you choose the right network technology for your specific needs.</p
